@@ -7,7 +7,7 @@ export const projects = [
         desc: "Furora is a pet-friendly web application that helps users discover pet-friendly locations, manage pet care routines, track expenses, and find perfect matches for their pets.",
         long: "Built a map-centric UX with Leaflet (custom markers & bounds sync), an Explore page that reads OSM/Overpass data, and a Care section for tips. Added smooth interactions with Framer Motion, deep links for opening in native maps with place names, and mobile-first accessibility.",
         repo: "https://github.com/yeruvasruthi/furora",
-        image: "/public/furora-cover.png",
+        image: "/images/furora-cover.png",
         impact: [
             "Fast map interactions on mobile (60fps feel with lightweight tiles).",
             "Fewer taps to a destination via deep links to native maps.",
@@ -29,7 +29,7 @@ export const projects = [
       slug: "ai-solutions-dashboard",
       title: "AI Solutions Dashboard & Component Library",
       tags: ["React", "TypeScript", "Sass", "Firebase", "Jest"],
-      image: "/public/solutions.png",
+      image: "/images/solutions.png",
       impact: [
         "+99.9% uptime during test deployments",
         "-30% post-release defects",
@@ -59,7 +59,7 @@ export const projects = [
       slug: "smart-city-traffic",
       title: "Smart City Traffic Management (Spring Boot)",
       tags: ["Java", "Spring Boot", "REST API", "MySQL", "Docker"],
-      image: "/public/smartcity.png",
+      image: "/images/smartcity.png",
       impact: [
         "+35% faster route processing",
         "20% query performance improvement through index tuning",
@@ -88,7 +88,7 @@ export const projects = [
       slug: "cloud-expense-tracker",
       title: "Cloud Expense Tracker Platform",
       tags: ["MERN", "AWS EC2", "JWT", "Route 53"],
-      image: "/public/expense.png",
+      image: "/images/expense.png",
       impact: [
         "+25% improvement in financial visibility for users",
         "99.9% uptime across test deployments",
