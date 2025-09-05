@@ -1,4 +1,4 @@
-# Sruthi Yeruva — Portfolio (React + Vite + Tailwind)
+# Sruthi Yeruva: Portfolio (React + Vite + Tailwind)
 
 I transform ideas into elegant, high-performing software, from concept to cloud.
 
