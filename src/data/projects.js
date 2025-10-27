@@ -9,7 +9,8 @@ export const projects = [
       "iOS app for journaling, light content, and voice notes, privacy-minded permissions and background-safe Firebase sync.",
     long:
       "Developed an iOS app that supports journaling (notes), light content (short stories/jokes), and voice recording with AVFoundation. Implemented privacy-minded permissions, Keychain where appropriate, and background-safe uploads to Firebase. Designed a Firebase data layer (Firestore + Storage) with offline caching and conflict-aware sync, plus structured error handling and retry/backoff for URLSession calls. Improved reliability and UX with input validation, empty/error states, and accessibility (Dynamic Type/VoiceOver). Added unit tests (XCTest) and profiled critical paths with Instruments.",
-    impact: [
+      repo: "https://github.com/yeruvasruthi/moodmaster",
+      impact: [
       "Smooth offline-first UX with conflict-aware sync.",
       "Background-safe uploads; fewer user-visible errors.",
       "Accessible by default (Dynamic Type + VoiceOver)."
@@ -26,7 +27,7 @@ export const projects = [
       "Prioritized privacy and accessibility from the start.",
       "Added XCTest + Instruments profiling for reliability and performance."
     ],
-    repo: null,
+    
     demo: null
   },
 
@@ -62,6 +63,7 @@ export const projects = [
     title: "AI Solutions Dashboard & Component Library",
     tags: ["React", "TypeScript", "Sass", "Firebase", "Jest"],
     image: "/images/solutions.png",
+    repo : "https://github.com/yeruvasruthi/solutions.dashboard",
     impact: [
       "+99.9% uptime during test deployments",
       "-30% post-release defects",
@@ -91,6 +93,7 @@ export const projects = [
     title: "Smart City Traffic Management (Spring Boot)",
     tags: ["Java", "Spring Boot", "REST API", "MySQL", "Docker"],
     image: "/images/smartcity.png",
+    repo : "https://github.com/yeruvasruthi/smartcity.git",
     impact: [
       "+35% faster route processing",
       "20% query performance improvement through index tuning",
@@ -120,6 +123,7 @@ export const projects = [
     title: "Cloud Expense Tracker Platform",
     tags: ["MERN", "AWS EC2", "JWT", "Route 53"],
     image: "/images/expense.png",
+    repo : "https://github.com/yeruvasruthi/expense-tracker.git",
     impact: [
       "+25% improvement in financial visibility for users",
       "99.9% uptime across test deployments",
@@ -142,5 +146,100 @@ export const projects = [
       "Created a secure MERN stack expense tracker with JWT authentication, AWS deployment, and real-time analytics, improving users’ financial visibility by 25%.",
     long:
       "Developed a full-stack expense tracking platform using the MERN stack (MongoDB, Express, React, Node.js) with JWT-based user authentication and personalized budgeting dashboards. Enabled real-time transaction tracking and dynamic filtering for over 10,000 records using MongoDB’s flexible schema design. Deployed the solution on AWS EC2 with Route 53 DNS configuration, achieving 99.9% uptime. Automated API validation and regression testing with Postman, reducing manual QA time by 40% and ensuring robust feature delivery."
+  },
+  {
+    slug: "online-bookstore-management",
+    title: "Online Book Store Management System",
+    tags: ["Java", "Spring Boot", "Maven", "MySQL", "REST API"],
+    image: "/images/bookstore.png",
+    repo: "https://github.com/yeruvasruthi/bookstore-management",
+    impact: [
+      "+30% faster order processing through optimized SQL queries",
+      "Reduced data redundancy by 45% via normalized schema design",
+      "Enhanced user experience with real-time inventory updates"
+    ],
+    architecture: [
+      "Backend built with Java Spring Boot and Maven for modular architecture",
+      "RESTful API endpoints for seamless front-end integration",
+      "MySQL relational database with normalized schema design",
+      "Secure CRUD operations for users, books, and transactions",
+      "Role-based access for admins, customers, and sellers"
+    ],
+    decisions: [
+      "Chose Spring Boot for production-grade backend scalability",
+      "Used MySQL for structured data consistency and relational mapping",
+      "Adopted Maven for dependency management and modular build configuration",
+      "Implemented REST APIs to enable flexible front-end integrations"
+    ],
+    desc:
+      "Engineered a robust online bookstore backend using Java, Spring Boot, and MySQL with secure REST APIs and efficient schema design, improving data consistency and transaction speed by 30%.",
+    long:
+      "Designed and developed a full-fledged Online Book Store Management System using Java and Spring Boot with Maven-based project structuring. Built RESTful APIs to manage books, users, and transactions with authentication and role-based access. Integrated a MySQL database with normalized schema for efficient data storage and retrieval, improving query performance by 30%. Implemented business logic for cart, order management, and inventory synchronization. Focused on modular architecture, maintainability, and scalability suitable for real-world e-commerce applications."
+  },
+  {
+    slug: "focuspod",
+    title: "FocusPod – AI-Powered Flow Sessions",
+    tags: ["Next.js", "TypeScript", "TailwindCSS", "Supabase", "OpenAI API", "Spotify API", "PWA"],
+    image: "/images/focuspod.png",
+    repo: "https://github.com/yeruvasruthi/focuspod",
+    impact: [
+      "Boosted average deep-work time per session by 35+ minutes",
+      "Identified each user's most productive time window using mood + activity data",
+      "Reduced 'context switching' events during a session through guided flow scripting"
+    ],
+    architecture: [
+      "Next.js + TypeScript frontend with TailwindCSS and Framer Motion for soft, responsive UX",
+      "PWA-first design (offline support, mobile-friendly, push-ready)",
+      "Supabase backend for auth, user profiles, session history, mood logs, and analytics storage (PostgreSQL)",
+      "AI personalization layer using OpenAI API to generate adaptive focus scripts and guidance",
+      "Dynamic music integration via Spotify Web API with YouTube/Last.fm fallback for non-premium users",
+      "Analytics dashboard with Recharts to visualize focus streaks, break discipline, and emotional trends"
+    ],
+    decisions: [
+      "Chose Next.js + PWA to make it frictionless on desktop and mobile without needing an app store install",
+      "Used Supabase to offload auth, DB, and edge functions while keeping full SQL control (PostgreSQL)",
+      "Integrated OpenAI to tailor sessions based on mood, task type, and time of day → feels like a personal coach",
+      "Pulled music from Spotify/YouTube to generate playlists that match energy level, not just genre",
+      "Added post-session journaling to collect feedback loops for lightweight mood tracking and future recommendations"
+    ],
+    desc:
+      "FocusPod is an AI-guided focus and mood regulation tool that builds personalized work sessions, music, and break timing in real time. It learns how you focus and adapts — not just a timer, an actual assistant.",
+    long:
+      "Designed and built FocusPod, a personalized focus companion that blends AI coaching, dynamic music, and behavioral analytics. The frontend is built with Next.js, TypeScript, TailwindCSS, and Framer Motion for an immersive, low-friction experience with light/dark 'focus modes.' The app generates custom session scripts using the OpenAI API (e.g. calming guidance before high-stress tasks) and pairs them with mood-aligned music pulled from the Spotify Web API, with YouTube/Last.fm as fallback. User data — mood logs, session history, energy patterns — is stored in Supabase (PostgreSQL + Auth + Edge Functions) and visualized in a trends dashboard using Recharts, surfacing insights like 'You’re most productive between 8–10 PM with piano + rain.' Includes PWA support, offline behavior, and post-session journaling to continuously improve recommendations."
+  },
+  {
+    slug: "wordle-clone",
+    title: "Wordle-Style Word Puzzle Game",
+    tags: ["React.js", "TypeScript", "Netlify", "LocalStorage", "Dictionary API"],
+    image: "/images/wordle.png",
+    repo: "https://github.com/yeruvasruthi/wordle",
+    live: "https://famous-quokka-f2bfd4.netlify.app/",
+    impact: [
+      "Provided an interactive browser game with 0 backend dependency (100% client-side)",
+      "Improved mobile playability with custom input handling for touch keyboards",
+      "Added learning value via built-in hint + definition system, not just guessing"
+    ],
+    architecture: [
+      "React.js front end with component-driven game board, keyboard, and toast feedback",
+      "Dynamic word generation from a curated 5-letter word list each round",
+      "Dictionary API integration (dictionaryapi.dev) to fetch real definitions as contextual hints",
+      "LocalStorage persistence to track wins/losses and streaks across sessions",
+      "Responsive UI with dark/light theme toggle and confetti animations on correct solve",
+      "Deployed as a fully static app on Netlify for instant global access"
+    ],
+    decisions: [
+      "Chose React for fast state updates on each guess (color feedback, row flip animations)",
+      "Used LocalStorage to avoid needing a backend or login while still keeping personal stats",
+      "Integrated a live dictionary API to make hints educational, not random",
+      "Implemented mobile-friendly hidden input to keep gameplay smooth on touch devices",
+      "Added instant ‘New Game’ flow so users don’t have to refresh the page to replay"
+    ],
+    desc:
+      "A mobile-friendly Wordle-style puzzle game built with React that includes instant feedback, intelligent hinting, dark/light modes, and persistent win/loss tracking — all running fully client-side and deployed on Netlify.",
+    long:
+      "Built a responsive Wordle-style guessing game using React.js, featuring color-coded feedback for each letter, an on-screen keyboard, and smooth state-driven UI updates. The app selects a random 5-letter word each session and integrates with dictionaryapi.dev to surface actual definitions as hints; if no definition is found, it falls back to structured hints like first/last letter. Player stats (wins, losses, streaks) are stored in LocalStorage so progress survives refreshes with zero backend. Includes dark/light themes, celebratory confetti on a win, and a ‘New Game’ button to instantly start a new round. Deployed on Netlify as a static, zero-cost, globally accessible PWA-like experience."
   }
+  
+  
+  
 ]
